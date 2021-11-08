@@ -1,7 +1,6 @@
 from flask_restful import Resource
 
-
-class Student(Resource):
+class Students(Resource):
     def get(self):
         pass
 
