@@ -1,24 +1,24 @@
-CREATE TABLE people{
+CREATE TABLE IF NOT EXISTS people{
     person_id INT PRIMARY KEY,
     first_name varchar(30) NOT NULL,
     last_name varchar(30) NOT NULL,
     birth_date DATE,
     gender varchar(1),
     phone_number INT,
-    email varchar(50),
-}
+    email varchar(50)
+};
 
-CREATE TABLE sections{
+CREATE TABLE IF NOT EXISTS sections{
     section_id INT PRIMARY KEY,
     section_name VARCHAR(20) NOT NULL,
     mayor_id INT,
-    vice_mayor_id INT,
-}
+    vice_mayor_id INT
+};
 
-CREATE TABLE students{
-    student_id INT,
-    section_id INT,
-}
+CREATE TABLE IF NOT EXISTS students{
+    student_id INT UNIQUE,
+    section_id INT
+};
 
 ALTER TABLE sections
 ADD FOREIGN KEY(mayor_id)
