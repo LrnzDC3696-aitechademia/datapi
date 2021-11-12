@@ -1,11 +1,12 @@
 CREATE TABLE IF NOT EXISTS people{
     person_id INT PRIMARY KEY,
-    first_name varchar(30) NOT NULL,
-    last_name varchar(30) NOT NULL,
+    first_name varchar(69) NOT NULL,
+    last_name varchar(69) NOT NULL,
     birth_date DATE,
     gender varchar(1),
     phone_number INT,
-    email varchar(50)
+    email varchar(50),
+    date_added DATE DEFAULT GETDATE() NOT NONE
 };
 
 CREATE TABLE IF NOT EXISTS sections{
