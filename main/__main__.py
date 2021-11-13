@@ -24,12 +24,13 @@ app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 api = Api(app)
 db = SQLAlchemy(app)
 
+from models import Person, Section, Student
+
 
 def add_resource(api):
     api.add_resource(People)
     api.add_resource(Students)
     api.add_resource(Sections)
-
 
 add_resource(api)
 # db.create_all()
